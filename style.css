@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 38px;
+}
+
+.total-box {
+    background: #222;
+    color: white;
+    padding: 28px;
+    border-radius: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.total-box p {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.total-box h2 {
+    font-size: 40px;
+}
+
+/* Summary Cards */
+
+.summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.summary-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+}
+
+.summary-card span {
+    display: block;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.summary-card strong {
+    font-size: 24px;
+}
+
+/* Budget */
+
+.budget-box {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+    margin-bottom: 20px;
+}
+
+.budget-box h2 {
+    margin-bottom: 15px;
+}
+
+.budget-box input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.budget-box button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.budget-info {
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
+/* Expense Form */
+
+.expense-form {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+    margin-bottom: 30px;
+}
+
+.expense-form input,
+.expense-form select {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.expense-form button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* History */
+
+.container > h2 {
+    margin-bottom: 15px;
+}
+
+.expense-item {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.expense-info strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.expense-info small {
+    color: #777;
+}
+
+.expense-amount {
+    font-weight: bold;
+}
+
+.delete-btn {
+    margin-left: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .total-box h2 {
+        font-size: 32px;
+    }
+}
+/* V2 Budget Progress */
+
+.progress-section {
+    margin-top: 20px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 14px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progressFill {
+    width: 0%;
+    height: 100%;
+    background: #22c55e;
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+
+/* Category Spending */
+
+.category-box {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+    margin-bottom: 30px;
+}
+
+.category-box h2 {
+    margin-bottom: 18px;
+}
+
+.category-item {
+    margin-bottom: 16px;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.category-name {
+    font-weight: bold;
+}
+
+.category-total {
+    font-weight: bold;
+}
+
+.category-progress {
+    width: 100%;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.category-progress-fill {
+    height: 100%;
+    background: #222;
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+/* History Filters */
+.filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters input,
+.filters select,
+.filters button {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.filters button {
+    background: #222;
+    color: white;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    opacity: 0.85;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .filters {
+        grid-template-columns: 1fr;
+    }
+}
+/* V9 Dark Mode */
+
+body.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .card,
+body.dark-mode .summary-card,
+body.dark-mode .expense-item,
+body.dark-mode .total-box,
+body.dark-mode .expense-form {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+    background: #2a2a2a;
+    color: #ffffff;
+    border-color: #555;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode strong,
+body.dark-mode small {
+    color: #ffffff;
+}
+
+#darkModeBtn {
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    cursor: pointer;
+}
+
+#darkModeBtn:hover {
+    opacity: 0.85;
+}
+/* V9 UI Polish */
+
+#darkModeBtn {
+    display: block;
+    margin: 10px auto 25px;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#darkModeBtn:active {
+    transform: scale(0.97);
+}
+/* V10 Mobile Responsive */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .expense-form {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        grid-template-columns: 1fr;
+    }
+
+    .report-controls {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #expenseChart {
+        max-width: 100%;
+        height: auto !important;
+    }
+}
+body.dark-mode .budget-box,
+body.dark-mode .category-box {
+    background: #1e1e1e;
+    color: #ffffff;
+}

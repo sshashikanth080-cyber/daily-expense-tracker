@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>💰 Daily Expense Tracker</h1>
+
+        <!-- Main Total -->
+        <div class="total-box">
+            <p>Total Expenses</p>
+            <h2>₹<span id="totalAmount">0.00</span></h2>
+        </div>
+
+        <!-- V2 Summary -->
+        <div class="summary">
+
+            <div class="summary-card">
+                <span>📅 Today</span>
+                <strong>₹<span id="todayAmount">0.00</span></strong>
+            </div>
+
+            <div class="summary-card">
+                <span>📆 This Month</span>
+                <strong>₹<span id="monthAmount">0.00</span></strong>
+            </div>
+
+        </div>
+
+<!-- Monthly Budget -->
+<div class="budget-box">
+
+    <h2>💰 Monthly Budget</h2>
+
+    <input
+        type="number"
+        id="monthlyBudget"
+        placeholder="Enter monthly budget"
+    >
+
+    <button onclick="saveBudget()">Save Budget</button>
+
+    <div class="budget-info">
+        <p>Budget: ₹<span id="budgetAmount">0.00</span></p>
+        <p>Remaining: ₹<span id="remainingAmount">0.00</span></p>
+    </div>
+
+    <!-- Budget Progress -->
+    <div class="progress-section">
+        <div class="progress-header">
+            <span>Budget Used</span>
+            <span id="budgetPercentage">0%</span>
+        </div>
+
+        <div class="progress-bar">
+            <div id="progressFill"></div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Category Spending -->
+<div class="category-box">
+
+    <h2>📊 Category Spending</h2>
+
+    <div id="categoryList"></div>
+
+</div>
+
+        <!-- Add Expense -->
+        <div class="expense-form">
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Enter amount"
+            >
+
+            <select id="category">
+                <option value="">Select Category</option>
+                <option value="Food">🍔 Food</option>
+                <option value="Travel">🚗 Travel</option>
+                <option value="Shopping">🛍️ Shopping</option>
+                <option value="Bills">💡 Bills</option>
+                <option value="Other">📦 Other</option>
+            </select>
+
+            <input
+                type="text"
+                id="note"
+                placeholder="Enter note"
+            >
+
+            <input
+                type="date"
+                id="date"
+            >
+
+            <button onclick="addExpense()">Add Expense</button>
+
+        </div>
+<!-- V7 Reports -->
+<div class="card">
+    <h2>Expense Reports</h2>
+
+    <div class="report-controls">
+        <input type="month" id="reportMonth">
+
+        <button type="button" onclick="generateMonthlyReport()">
+            Generate Report
+        </button>
+        <button type="button" onclick="exportCSV()">
+    Export CSV
+</button>
+<button type="button" onclick="exportPDF()">
+    Export PDF
+</button>
+    </div>
+
+    <div id="monthlyReport"></div>
+</div>
+        <h2>Expense History</h2>
+        <!-- V6 Charts -->
+<div class="card">
+    <h2>Spending Overview</h2>
+
+    <canvas id="expenseChart"></canvas>
+</div>
+<!-- V3 Filters -->
+<div class="filters">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Search expenses..."
+        oninput="filterExpenses()"
+    >
+
+    <select
+        id="filterCategory"
+        onchange="filterExpenses()"
+    >
+        <option value="">All Categories</option>
+        <option value="Food">🍔 Food</option>
+        <option value="Travel">🚗 Travel</option>
+        <option value="Shopping">🛍️ Shopping</option>
+        <option value="Bills">💡 Bills</option>
+        <option value="Other">📦 Other</option>
+    </select>
+
+    <input
+        type="date"
+        id="filterDate"
+        onchange="filterExpenses()"
+    >
+
+    <button
+        type="button"
+        onclick="clearFilters()"
+    >
+        Clear Filters
+    </button>
+
+</div>
+        <div id="expenseList"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+<button id="darkModeBtn" onclick="toggleDarkMode()">
+    🌙 Dark Mode
+</button>
+</body>
+</html>
