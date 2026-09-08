@@ -38,12 +38,10 @@ https://sshashikanth080-cyber.github.io/daily-expense-tracker/
 
 ## 📁 Project Structure
 
-```text
-daily-expense-tracker/
-│
-├── index.html
+- `index.html` — Main application structure
+- `style.css` — Styling and responsive design
+- `script.js` — Application logic and functionality
 
-` ``` `
 ## 📸 Screenshots
 
 ### Dashboard
