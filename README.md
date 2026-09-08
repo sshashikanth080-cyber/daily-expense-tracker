@@ -47,13 +47,13 @@ daily-expense-tracker/
 ## 📸 Screenshots
 
 ### Dashboard
-![Dashboard](Screenshot%202026-09-06%20231429.png)
+![Dashboard](https://raw.githubusercontent.com/sshashikanth080-cyber/daily-expense-tracker/main/Screenshot%202026-09-06%20231429.png)
 
 ### Category Spending & Add Expense
-![Category Spending](Screenshot%202026-09-06%20232040.png)
+![Category Spending](https://raw.githubusercontent.com/sshashikanth080-cyber/daily-expense-tracker/main/Screenshot%202026-09-06%20232040.png)
 
 ### Spending Overview
-![Spending Overview](Screenshot%202026-09-06%20232118.png)
+![Spending Overview](https://raw.githubusercontent.com/sshashikanth080-cyber/daily-expense-tracker/main/Screenshot%202026-09-06%20232118.png)
 
 ### Expense History & Filters
-![Expense History](Screenshot%202026-09-06%20232136.png)
+![Expense History](https://raw.githubusercontent.com/sshashikanth080-cyber/daily-expense-tracker/main/Screenshot%202026-09-06%20232136.png)
