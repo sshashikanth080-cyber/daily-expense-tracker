@@ -43,18 +43,17 @@ daily-expense-tracker/
 │
 ├── index.html
 
+` ``` `
 ## 📸 Screenshots
 
 ### Dashboard
-![Dashboard](<Screenshot 2026-09-06 231429.png>)
+![Dashboard](Screenshot%202026-09-06%20231429.png)
 
 ### Category Spending & Add Expense
-![Category Spending](<Screenshot 2026-09-06 232040.png>)
+![Category Spending](Screenshot%202026-09-06%20232040.png)
 
 ### Spending Overview
-![Spending Overview](<Screenshot 2026-09-06 232118.png>)
+![Spending Overview](Screenshot%202026-09-06%20232118.png)
 
 ### Expense History & Filters
-![Expense History](<Screenshot 2026-09-06 232136.png>)
-├── style.css
-└── script.js
+![Expense History](Screenshot%202026-09-06%20232136.png)
